@@ -1,0 +1,317 @@
+/* Reset y estilos base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+code {
+  font-family: 'Courier New', source-code-pro, Menlo, Monaco, Consolas,
+    monospace;
+}
+
+/* Variables CSS para temas */
+:root {
+  /* Tema claro */
+  --primary-color: #00ff88;
+  --secondary-color: #ffaa00;
+  --background-color: #f5f5f5;
+  --surface-color: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  /* Tema oscuro */
+  --primary-color: #00ff88;
+  --secondary-color: #ffaa00;
+  --background-color: #0a0a0a;
+  --surface-color: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --border-color: #333333;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='night'] {
+  /* Tema noche (preserva visión nocturna) */
+  --primary-color: #ff4444;
+  --secondary-color: #ffaa00;
+  --background-color: #000000;
+  --surface-color: #111111;
+  --text-primary: #ff4444;
+  --text-secondary: #ffaaaa;
+  --border-color: #333333;
+  --shadow: rgba(255, 68, 68, 0.1);
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* Espaciado */
+.m-0 { margin: 0; }
+.m-1 { margin: 0.25rem; }
+.m-2 { margin: 0.5rem; }
+.m-3 { margin: 0.75rem; }
+.m-4 { margin: 1rem; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 0.75rem; }
+.p-4 { padding: 1rem; }
+
+/* Colores de aviación estándar */
+.color-primary {
+  color: var(--primary-color);
+}
+
+.color-secondary {
+  color: var(--secondary-color);
+}
+
+.color-danger {
+  color: #ff4444;
+}
+
+.color-warning {
+  color: #ffaa00;
+}
+
+.color-success {
+  color: #00ff88;
+}
+
+.color-info {
+  color: #66ccff;
+}
+
+/* Backgrounds */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-surface {
+  background-color: var(--surface-color);
+}
+
+.bg-danger {
+  background-color: #ff4444;
+}
+
+.bg-warning {
+  background-color: #ffaa00;
+}
+
+.bg-success {
+  background-color: #00ff88;
+}
+
+/* Transiciones suaves */
+.transition {
+  transition: all 0.2s ease;
+}
+
+.transition-fast {
+  transition: all 0.1s ease;
+}
+
+.transition-slow {
+  transition: all 0.3s ease;
+}
+
+/* Sombras */
+.shadow-sm {
+  box-shadow: 0 1px 2px var(--shadow);
+}
+
+.shadow {
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Bordes redondeados */
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Hover effects */
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+/* Selección de texto */
+::selection {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+/* Desactivar selección en elementos UI */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Cursor pointer para elementos interactivos */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+/* Truncar texto */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}

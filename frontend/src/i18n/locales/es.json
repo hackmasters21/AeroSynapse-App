@@ -1,0 +1,322 @@
+{
+  "app": {
+    "title": "AeroSynapse",
+    "subtitle": "Sistema de Conciencia Situacional y Planificación de Vuelo",
+    "loading": "Cargando Sistema de Conciencia Situacional...",
+    "error": "Error",
+    "success": "Éxito",
+    "warning": "Advertencia",
+    "info": "Información"
+  },
+  "navigation": {
+    "map": "Mapa",
+    "traffic": "Tráfico Aéreo",
+    "route": "Planificación de Ruta",
+    "alerts": "Alertas",
+    "weather": "Meteorología",
+    "safety": "Seguridad",
+    "radar": "Radar",
+    "analytics": "Análisis",
+    "settings": "Configuración",
+    "about": "Acerca de"
+  },
+  "header": {
+    "online": "En línea",
+    "offline": "Desconectado",
+    "aircraft_count": "{{count}} aeronaves",
+    "alerts_count": "{{count}} alertas",
+    "theme": "Tema: {{mode}}",
+    "configuration": "Configuración"
+  },
+  "map": {
+    "my_location": "Mi Ubicación",
+    "zoom_in": "Acercar",
+    "zoom_out": "Alejar",
+    "layers": "Capas del Mapa",
+    "fullscreen": "Pantalla Completa",
+    "exit_fullscreen": "Salir de Pantalla Completa",
+    "styles": {
+      "openstreetmap": "OpenStreetMap",
+      "satellite": "Satélite",
+      "terrain": "Terreno",
+      "aviation": "Aviación"
+    },
+    "settings": {
+      "title": "Configuración del Mapa",
+      "show_trails": "Mostrar estelas de aeronaves",
+      "auto_zoom": "Zoom automático a aeronave seleccionada",
+      "show_on_ground": "Aeronaves en tierra",
+      "show_emergency": "Alertas de emergencia"
+    }
+  },
+  "aircraft": {
+    "callsign": "Indicativo",
+    "registration": "Matrícula",
+    "type": "Tipo de Aeronave",
+    "airline": "Aerolínea",
+    "altitude": "Altitud",
+    "speed": "Velocidad",
+    "heading": "Rumbo",
+    "vertical_speed": "V/S",
+    "origin": "Origen",
+    "destination": "Destino",
+    "squawk": "Squawk",
+    "position": "Posición",
+    "last_update": "Última Actualización",
+    "status": {
+      "in_flight": "En Vuelo",
+      "on_ground": "En Tierra",
+      "emergency": "EMERGENCIA"
+    },
+    "data_quality": {
+      "current": "Datos actuales",
+      "recent": "Datos recientes",
+      "old": "Datos antiguos"
+    }
+  },
+  "traffic": {
+    "title": "Tráfico Aéreo",
+    "search_placeholder": "Buscar por indicativo, matrícula, tipo...",
+    "sort_by": "Ordenar por",
+    "filters": "Filtros",
+    "show_ground_aircraft": "Mostrar aeronaves en tierra",
+    "show_emergencies": "Mostrar emergencias",
+    "altitude_min": "Altitud mín (ft)",
+    "altitude_max": "Altitud máx (ft)",
+    "statistics": {
+      "aircraft_count": "{{count}} aeronaves",
+      "in_flight": "{{count}} en vuelo",
+      "emergencies": "{{count}} emergencias"
+    },
+    "no_aircraft": "No se encontraron aeronaves",
+    "no_visible_aircraft": "No hay aeronaves visibles"
+  },
+  "route": {
+    "title": "Planificación de Ruta",
+    "origin": "Origen (ICAO)",
+    "destination": "Destino (ICAO)",
+    "cruise_altitude": "Altitud de Crucero (ft)",
+    "route_type": "Tipo de Ruta",
+    "calculate_routes": "Calcular Rutas",
+    "calculating": "Calculando...",
+    "clear": "Limpiar",
+    "selected_route": "Ruta Seleccionada",
+    "available_routes": "Rutas Disponibles ({{count}})",
+    "route_types": {
+      "direct": "Directa",
+      "airways": "Por Airways",
+      "custom": "Personalizada"
+    },
+    "route_info": {
+      "distance": "{{distance}} NM",
+      "time": "{{hours}}h {{minutes}}m",
+      "fuel": "{{fuel}} lbs",
+      "flight_level": "FL{{level}}"
+    },
+    "no_routes": "Introduce origen y destino para calcular rutas"
+  },
+  "alerts": {
+    "title": "Alertas del Sistema",
+    "unacknowledged": "{{count}} sin reconocer",
+    "critical": "{{count}} críticas",
+    "total": "{{count}} total",
+    "acknowledge_all": "Reconocer Todas",
+    "clear": "Limpiar",
+    "filters": "Filtros",
+    "severity": "Severidad",
+    "show_acknowledged": "Mostrar reconocidas",
+    "voice_alerts": "Alertas por voz",
+    "mute_alerts": "Silenciar alertas",
+    "activate_sounds": "Activar sonidos",
+    "acknowledge": "Reconocer",
+    "acknowledged": "✓ Reconocida",
+    "delete": "Eliminar",
+    "types": {
+      "collision_warning": "Advertencia de Colisión",
+      "proximity_alert": "Alerta de Proximidad",
+      "altitude_deviation": "Desviación de Altitud",
+      "course_deviation": "Desviación de Rumbo",
+      "weather_warning": "Advertencia Meteorológica",
+      "airspace_violation": "Violación de Espacio Aéreo",
+      "system_error": "Error del Sistema",
+      "data_loss": "Pérdida de Datos"
+    },
+    "severity_levels": {
+      "critical": "CRÍTICA",
+      "high": "ALTA",
+      "medium": "MEDIA",
+      "low": "BAJA"
+    },
+    "no_alerts": "No hay alertas en el sistema",
+    "no_matching_alerts": "No hay alertas que coincidan con los filtros"
+  },
+  "weather": {
+    "title": "Meteorología y Clima",
+    "subtitle": "Agregación Meteorológica Multi-Fuente",
+    "confidence": "Confianza",
+    "confidence_levels": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "sources": {
+      "awc": "Centro Meteorológico de Aviación",
+      "noaa": "Satélite NOAA",
+      "eumetsat": "EUMETSAT",
+      "rainviewer": "Radar RainViewer",
+      "gfs": "Modelo GFS",
+      "ecmwf": "Modelo ECMWF"
+    },
+    "layers": {
+      "satellite_ir": "Satélite Infrarrojo",
+      "radar_precipitation": "Precipitación por Radar",
+      "sigmets_airmets": "SIGMETs/AIRMETs",
+      "winds_aloft": "Vientos en Altura",
+      "isotachs": "Isotacas"
+    },
+    "reports": {
+      "metar": "METAR",
+      "taf": "TAF",
+      "sigmet": "SIGMET",
+      "airmet": "AIRMET"
+    },
+    "conditions": {
+      "turbulence": "Turbulencia",
+      "icing": "Engelamiento",
+      "thunderstorms": "Tormentas",
+      "volcanic_ash": "Ceniza Volcánica",
+      "wind_shear": "Cizalladura"
+    },
+    "disclaimer": "INFORMACIÓN PARA PLANIFICACIÓN. LA METEOROLOGÍA ES DINÁMICA E INCIERTA. CONSULTE LOS REPORTES OFICIALES (ATIS, ASOS, VOLMET) Y CONTACTE AL CONTROL DE TRÁFICO AÉREO (ATC) PARA INFORMACIÓN EN TIEMPO REAL DURANTE EL VUELO."
+  },
+  "safety": {
+    "title": "Seguridad e Historial de Accidentes",
+    "subtitle": "Conciencia de Accidentes Históricos",
+    "accident_info": "Información del Accidente",
+    "date": "Fecha",
+    "aircraft_registration": "Matrícula de la Aeronave",
+    "aircraft_type": "Tipo de Aeronave",
+    "flight_phase": "Fase de Vuelo",
+    "fatalities": "Fatalidades",
+    "probable_cause": "Causa Probable",
+    "contributing_factors": "Factores Contribuyentes",
+    "filters": {
+      "flight_phase": "Fase de Vuelo",
+      "aircraft_type": "Tipo de Aeronave",
+      "severity": "Severidad",
+      "time_range": "Rango de Tiempo"
+    },
+    "flight_phases": {
+      "takeoff": "Despegue",
+      "climb": "Ascenso",
+      "cruise": "Crucero",
+      "descent": "Descenso",
+      "approach": "Aproximación",
+      "landing": "Aterrizaje",
+      "ground": "Operaciones en Tierra"
+    },
+    "severity_types": {
+      "fatal": "Con Fatalidades",
+      "non_fatal": "Sin Fatalidades",
+      "all": "Todos los Accidentes"
+    },
+    "sources": {
+      "ntsb": "Base de Datos NTSB",
+      "asn": "Red de Seguridad Aérea"
+    }
+  },
+  "airspace": {
+    "title": "Información de Espacio Aéreo",
+    "fir": "Región de Información de Vuelo",
+    "ctr": "Zona de Control",
+    "tma": "Área de Control Terminal",
+    "restricted": "Zona Restringida",
+    "prohibited": "Zona Prohibida",
+    "danger": "Zona Peligrosa",
+    "military": "Zona Militar",
+    "frequency": "Frecuencia",
+    "altitude_limits": "Límites de Altitud",
+    "restrictions": "Restricciones",
+    "active": "ACTIVO",
+    "inactive": "INACTIVO",
+    "classes": {
+      "A": "Clase A",
+      "B": "Clase B",
+      "C": "Clase C",
+      "D": "Clase D",
+      "E": "Clase E",
+      "G": "Clase G"
+    }
+  },
+  "navaids": {
+    "vor": "VOR",
+    "dme": "DME",
+    "ndb": "NDB",
+    "ils": "ILS",
+    "tacan": "TACAN",
+    "frequency": "Frecuencia",
+    "range": "Alcance",
+    "identifier": "Identificador"
+  },
+  "units": {
+    "feet": "ft",
+    "nautical_miles": "NM",
+    "knots": "kt",
+    "feet_per_minute": "ft/min",
+    "degrees": "°",
+    "mhz": "MHz",
+    "pounds": "lbs",
+    "hours": "h",
+    "minutes": "m",
+    "seconds": "s"
+  },
+  "time": {
+    "ago": "hace {{time}}",
+    "now": "ahora",
+    "updated": "Actualizado",
+    "last_update": "Última actualización"
+  },
+  "system": {
+    "status": "Estado del Sistema",
+    "connected": "Conectado",
+    "disconnected": "Desconectado",
+    "reconnecting": "Reconectando",
+    "error": "Error",
+    "loading": "Cargando",
+    "no_data": "No hay datos disponibles",
+    "connection_lost": "Conexión perdida",
+    "reconnect_attempts": "Intentos de reconexión: {{count}}"
+  },
+  "common": {
+    "ok": "Aceptar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "refresh": "Actualizar",
+    "reset": "Restablecer",
+    "apply": "Aplicar",
+    "clear": "Limpiar",
+    "select": "Seleccionar",
+    "deselect": "Deseleccionar",
+    "all": "Todos",
+    "none": "Ninguno",
+    "yes": "Sí",
+    "no": "No",
+    "on": "Activado",
+    "off": "Desactivado",
+    "enabled": "Habilitado",
+    "disabled": "Deshabilitado",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "online": "En línea",
+    "offline": "Desconectado"
+  }
+}

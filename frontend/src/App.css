@@ -1,0 +1,362 @@
+/* Estilos globales para AeroSynapse */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  #root {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* Ensure full viewport coverage */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Estilos para el mapa */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #0a0a0a;
+}
+
+/* Modo noche para el mapa */
+.night-mode .leaflet-container {
+  background: #000000;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.night-mode .leaflet-tile {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Iconos de aeronaves */
+.aircraft-icon {
+  width: 24px;
+  height: 24px;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.aircraft-icon:hover {
+  transform: scale(1.2);
+}
+
+.aircraft-icon.selected {
+  filter: drop-shadow(0 0 8px #00ff88);
+}
+
+/* Estilos para alertas */
+.alert-high {
+  color: #ff4444 !important;
+  animation: blink 1s infinite;
+}
+
+.alert-medium {
+  color: #ffaa00 !important;
+}
+
+.alert-low {
+  color: #00ff88 !important;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+/* Paneles redimensionables */
+.resizable-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.resize-handle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.2s ease;
+}
+
+.resize-handle:hover {
+  background: rgba(0, 255, 136, 0.3);
+}
+
+.resize-handle-vertical {
+  width: 4px;
+  height: 100%;
+  top: 0;
+  cursor: col-resize;
+}
+
+.resize-handle-horizontal {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  cursor: row-resize;
+}
+
+/* Scrollbars personalizados */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 136, 0.7);
+}
+
+/* Modo noche - scrollbars */
+.night-mode ::-webkit-scrollbar-thumb {
+  background: rgba(255, 68, 68, 0.5);
+}
+
+.night-mode ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 68, 68, 0.7);
+}
+
+/* Animaciones de entrada */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Indicadores de estado */
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.status-online {
+  background: #00ff88;
+  box-shadow: 0 0 4px #00ff88;
+}
+
+.status-offline {
+  background: #ff4444;
+  box-shadow: 0 0 4px #ff4444;
+}
+
+.status-warning {
+  background: #ffaa00;
+  box-shadow: 0 0 4px #ffaa00;
+}
+
+/* Tooltips personalizados */
+.custom-tooltip {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid #00ff88 !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  padding: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.night-mode .custom-tooltip {
+  border-color: #ff4444 !important;
+  color: #ff4444 !important;
+}
+
+/* Estilos para datos de vuelo */
+.flight-data {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.flight-callsign {
+  font-weight: bold;
+  color: #00ff88;
+}
+
+.night-mode .flight-callsign {
+  color: #ff4444;
+}
+
+.flight-altitude {
+  color: #ffaa00;
+}
+
+.flight-speed {
+  color: #66ccff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .resizable-panel {
+    position: static;
+  }
+  
+  .resize-handle {
+    display: none;
+  }
+}
+
+/* Accesibilidad */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible para navegación por teclado */
+.focus-visible {
+  outline: 2px solid #00ff88;
+  outline-offset: 2px;
+}
+
+.night-mode .focus-visible {
+  outline-color: #ff4444;
+}
+
+/* Estilos para MapView */
+.user-location-dot {
+  width: 12px;
+  height: 12px;
+  background: #007bff;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.aviation-tiles {
+  filter: contrast(1.2) brightness(0.9);
+}
+
+.night-mode .aviation-tiles {
+  filter: invert(1) hue-rotate(180deg) contrast(1.2) brightness(0.8);
+}
+
+/* Animación blink para AlertsPanel */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.5; }
+}
+
+/* Estilos para AircraftPopup */
+.aircraft-popup .leaflet-popup-content-wrapper {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.aircraft-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+.aircraft-popup .leaflet-popup-tip {
+  background: rgba(0, 0, 0, 0.9);
+}
